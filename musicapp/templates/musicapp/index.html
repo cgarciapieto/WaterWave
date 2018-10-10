@@ -1,0 +1,14 @@
+{% if latest_musical_list %}
+
+<h1>WATER WAVE</h1>
+<ul>
+    {% for music in latest_musical_list %}
+    <li>{{ music.songName }}</li>
+    <li>{{ music.album }}</li>
+    <li>{{ music.duration}}</li>
+    <li>{{ rating.rating }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
